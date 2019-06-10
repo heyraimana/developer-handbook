@@ -49,15 +49,15 @@
 ## Types
 
 ### List each type, if it's a primitive or built-in type, its `typeof` return values, and its distinct value(s).
-| Type     |Primitive or Built-In |`typeof` Return Values     |Distinct Values                             |
-|----------|----------------------|---------------------------|--------------------------------------------|
-|String    |Primitive             |`'string'`                 |                                            |
-|Number    |Primitive             |`'number'`                 |`0`, `-0`, `Infinity`, `-Infinity`, `NaN`   |
-|Boolean   |Primitive             |`'boolean'`                |`true` or `false`                           |
-|Undefined |Primitive             |`'undefined'`              |`undefined`                                 |
-|Null      |Primitive             |`'object'`                 |`null`                                      |
-|Symbol    |Primitive             |`'symbol'`                 |                                            |
-|Object    |Built-In              |`'object'` or `'function'` |                                            |
+| Type      | Primitive or Built-In | `typeof` Return Values     | Distinct Values                           |
+| --------- | --------------------- | -------------------------- | ----------------------------------------- |
+| String    | Primitive             | `'string'`                 |                                           |
+| Number    | Primitive             | `'number'`                 | `0`, `-0`, `Infinity`, `-Infinity`, `NaN` |
+| Boolean   | Primitive             | `'boolean'`                | `true` or `false`                         |
+| Undefined | Primitive             | `'undefined'`              | `undefined`                               |
+| Null      | Primitive             | `'object'`                 | `null`                                    |
+| Symbol    | Primitive             | `'symbol'`                 |                                           |
+| Object    | Built-In              | `'object'` or `'function'` |                                           |
 
 References
 - https://tc39.github.io/ecma262/#sec-ecmascript-language-types
@@ -346,12 +346,12 @@ References
 ---
 
 ### What are the four execution contexts and the value of `this` for each context?
-|Execution Context|Value of `this`                                 |Example                               |
-|-----------------|------------------------------------------------|--------------------------------------|
-|Implicit binding |The object calling the function                 |`someObject.method()`                 |
-|Explicit binding |Whatever is set with `call`, `apply`, or `bind` |`someObject.call(thisValue, method) ` |
-|`new` binding    |The newly constructed object                    |`const myGhost = new Ghost()`         |
-|Default binding  |The global object or `undefined` in strict mode |`console.log(this)`                   |
+| Execution Context | Value of `this`                                 | Example                              |
+| ----------------- | ----------------------------------------------- | ------------------------------------ |
+| Implicit binding  | The object calling the function                 | `someObject.method()`                |
+| Explicit binding  | Whatever is set with `call`, `apply`, or `bind` | `someObject.call(thisValue, method)` |
+| `new` binding     | The newly constructed object                    | `const myGhost = new Ghost()`        |
+| Default binding   | The global object or `undefined` in strict mode | `console.log(this)`                  |
 
 References
 - https://alligator.io/js/this-keyword/
@@ -412,11 +412,11 @@ References
 ## ECMAScript Specification
 
 ### What are the three main parts of the ECMAScript specification?
-|Topics                |Sections                                                                            |Examples                                     |
-|----------------------|------------------------------------------------------------------------------------|---------------------------------------------|
-|Basics                |Introduction - 9. Ordinary and Exotic Objects Behaviours                            |What is a Number?                            |
-|Grammar and Semantics |10. ECMAScript Language: Source Code - 16. ECMAScript Language: Scripts and Modules |How is a `for-in` loop written and executed? |
-|APIs                  |17. The Global Object - 26. Reflection                                              |What does `String.prototype.substring()` do? |
+| Topics                | Sections                                                                            | Examples                                     |
+| --------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------- |
+| Basics                | Introduction - 9. Ordinary and Exotic Objects Behaviours                            | What is a Number?                            |
+| Grammar and Semantics | 10. ECMAScript Language: Source Code - 16. ECMAScript Language: Scripts and Modules | How is a `for-in` loop written and executed? |
+| APIs                  | 17. The Global Object - 26. Reflection                                              | What does `String.prototype.substring()` do? |
 
 References
 - https://timothygu.me/es-howto/
@@ -439,15 +439,15 @@ References
 ---
 
 #### What are the `ToString(argument)` return values for each type?
-|Type      |Return Values                                                |
-|----------|-------------------------------------------------------------|
-|String    |argument                                                     |
-|Number    |`'0'`, `'Infinity'`, `'-Infinity'`, `'NaN'`, or some string  |
-|Boolean   |`'true'` or `'false'`                                        |
-|Undefined |`'undefined'`                                                |
-|Null      |`'null'`                                                     |
-|Symbol    |`TypeError`                                                  |
-|Object    |`ToString(ToPrimitive(argument, hint String))`               |
+| Type      | Return Values                                               |
+| --------- | ----------------------------------------------------------- |
+| String    | argument                                                    |
+| Number    | `'0'`, `'Infinity'`, `'-Infinity'`, `'NaN'`, or some string |
+| Boolean   | `'true'` or `'false'`                                       |
+| Undefined | `'undefined'`                                               |
+| Null      | `'null'`                                                    |
+| Symbol    | `TypeError`                                                 |
+| Object    | `ToString(ToPrimitive(argument, hint String))`              |
 
 References
 - https://tc39.github.io/ecma262/#sec-tostring
@@ -458,15 +458,15 @@ References
 ---
 
 #### What are the `ToNumber(argument)` return values for each type?
-|Type      |Return Values                                                                                                  |
-|----------|---------------------------------------------------------------------------------------------------------------|
-|String    |`0`, `-0`, `Infinity`, `-Infinity`, `NaN`, `0` for an empty string or one with only whitespace, or some number |
-|Number    |argument                                                                                                       |
-|Boolean   |`1` or `0`                                                                                                     |
-|Undefined |`NaN`                                                                                                          |
-|Null      |`0`                                                                                                            |
-|Symbol    |`TypeError`                                                                                                    |
-|Object    |`ToNumber(ToPrimitive(argument, hint Number))`                                                                 |
+| Type      | Return Values                                                                                                  |
+| --------- | -------------------------------------------------------------------------------------------------------------- |
+| String    | `0`, `-0`, `Infinity`, `-Infinity`, `NaN`, `0` for an empty string or one with only whitespace, or some number |
+| Number    | argument                                                                                                       |
+| Boolean   | `1` or `0`                                                                                                     |
+| Undefined | `NaN`                                                                                                          |
+| Null      | `0`                                                                                                            |
+| Symbol    | `TypeError`                                                                                                    |
+| Object    | `ToNumber(ToPrimitive(argument, hint Number))`                                                                 |
 
 References
 - https://tc39.github.io/ecma262/#sec-tonumber
@@ -477,15 +477,15 @@ References
 ---
 
 #### What are the `ToBoolean(argument)` return values for each type?
-|Type      |Return Values                                  |
-|----------|-----------------------------------------------|
-|String    |`true` unless `''`                             |
-|Number    |`true` unless `0`, `-0`, or `NaN`              |
-|Boolean   |argument                                       |
-|Undefined |`false`                                        |
-|Null      |`false`                                        |
-|Symbol    |`true`                                         |
-|Object    |`true`                                         |
+| Type      | Return Values                     |
+| --------- | --------------------------------- |
+| String    | `true` unless `''`                |
+| Number    | `true` unless `0`, `-0`, or `NaN` |
+| Boolean   | argument                          |
+| Undefined | `false`                           |
+| Null      | `false`                           |
+| Symbol    | `true`                            |
+| Object    | `true`                            |
 
 References
 - https://tc39.github.io/ecma262/#sec-toboolean
