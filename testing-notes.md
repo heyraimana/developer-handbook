@@ -8,11 +8,11 @@
 ---
 
 ## What are three methods to reduce bugs, tools to do so, and examples of what they catch?
-|Method        |Tool(s)             |Catches                   |
-|--------------|--------------------|--------------------------|
-|Static Typing |Flow and TypeScript |Incorrect type usage      |
-|Linting       |ESLint              |Problematic code patterns |
-|Testing       |Jest                |Incorrect functionality   |
+| Method        | Tool(s)             | Catches                   |
+| ------------- | ------------------- | ------------------------- |
+| Static Typing | Flow and TypeScript | Incorrect type usage      |
+| Linting       | ESLint              | Problematic code patterns |
+| Testing       | Jest                | Incorrect functionality   |
 
 References
 - https://frontendmasters.com/courses/testing-practices-principles/automated-testing/
